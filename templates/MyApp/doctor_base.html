@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Doctor · Home</title>
+</head>
+<body>  
+   
+    <div class="navbar">
+        <a>Doctor Information</a>
+        <a href="{% url 'MyApp:logout' %}" class="logoutbtn">Logout</a>
+        
+    </div>
+     <div class="sidebar">
+        <div class="userprofile">
+            <h2 style="color:white; font-family:sans-serif; padding-top:25px; text-align:center; margin:0px;">Welcome!</h2>
+            <h4 style="color:white; font-family:sans-serif; text-align:center; padding-bottom:35px;">{{request.user.username}}</h4>
+        </div>
+        <a href="{% url 'MyApp:doctor_dashboard' %}"><img class="icon" src="{% static "images/PDash.png" %}">Dashboard</a>
+        <a href="{% url 'MyApp:doctor_patient' %}"><img class="icon" src="{% static "images/PIcon.png" %}">Patients</a>
+        <a href="{% url 'MyApp:doctor_appointment' %}"><img class="icon" src="{% static "images/ApptIcon.png" %}">Appointments</a>
+    </div>
+    
+<style> 
+        body {
+            background-color: rgb(255, 255, 255);
+            padding: 0px;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(255, 206, 70);
+            height:75px;
+            width:100%;
+            padding-top:22px;
+            z-index:1;
+            top:0;
+            position:fixed;
+            display:block;
+        }
+        .navbar a {
+            float: left;
+            display:block;
+            font-size: 26px;
+            color: black;
+            text-align: center;
+            padding-left:14px;
+            text-decoration: none;
+        }
+        .navbar .logoutbtn{
+            float: right;
+            display:block;
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            padding-top:4px;
+            padding-right:24px;
+            text-decoration: none;
+        }
+        .navbar .logoutbtn:hover{
+            color: rgb(0, 146, 146);
+
+        }
+        .sidebar .userprofile{
+            background-color: rgb(0, 122, 122);
+        }
+        .sidebar {
+            margin-top: 0px;
+            padding-top: 0px;
+            width: 20%;
+            text-align: center;
+            height=100vh;
+            background-color: rgb(0, 146, 146);
+            font-family: sans-serif;
+            font-size:17px;
+            font-weight: normal;
+            position: fixed;
+            top: 67px;
+            left: 0;
+            bottom: 0;
+           
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 25px;
+            text-decoration: none;
+        }
+        .icon{
+            float:left;
+            
+            width:30px;
+            height:30px;
+        }
+ 
+        .sidebar a.active {
+            color: rgb(255, 206, 70);
+        }
+
+        .sidebar a:hover:not(.active) {
+            color: rgb(255, 206, 70);
+        }
+
+        @media screen and (max-width: 700px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+</style>
+{%  block content_dashboard %}
+{%  endblock content_dashboard %}
+</body>
+</html>

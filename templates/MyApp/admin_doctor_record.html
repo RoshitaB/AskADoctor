@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Admin · Doctor Record</title>
+</head>
+<body> 
+    {% include 'MyApp/admin_base.html' %}
+    <div class="container" style="margin-left:25%; margin-right:8%; margin-top:7%;">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+            <h6 class="panel-title" style="text-align:center; padding: 5px 0px;">Doctor Records</h6>
+            </div>
+            <table class="table table-hover" id="dev-table">
+            <thead>
+                <tr>
+                <th style="text-align:center;">Name</th>
+                <th style="text-align:center;">Mobile</th>
+                <th style="text-align:center;">Address</th>
+                <th style="text-align:center;">Department</th>
+                <th style="text-align:center;">Update</th>
+                <th style="text-align:center;">Delete</th>
+                </tr>
+            </thead>
+            {% for d in doctors %}
+            <tr>
+                <td style="text-align:center;"> {{d.Doctor_First_Name}} {{d.Doctor_Last_Name}} </td> 
+                <td style="text-align:center;">{{d.contact}}</td>
+                <td style="text-align:center;">{{d.address}}</td>
+                <td style="text-align:center;">{{d.department}}</td>
+                <td style="text-align:center;"><a class="btn btn-primary btn-xs" href="{% url 'MyApp:update_doctor' d.id%}"><span class="glyphicon glyphicon-edit"></span></a></td>
+                <td style="text-align:center;"><a class="btn btn-danger btn-xs" href="{% url 'MyApp:delete_doctor' d.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+            </tr>
+            {% endfor %}
+            </table>
+        </div>
+    </div>
+</body>
+</html>

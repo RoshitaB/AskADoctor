@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">  
+</head>
+<body>
+
+
+<div class="dashboard" style="max-width:100%">
+  <img class="mySlides" src="https://fortis-doctor-images.s3.ap-south-1.amazonaws.com/Fortis_Doctors_Day_WB_1611x486+px-d.jpg" style="width:100%">
+  <img class="mySlides" src="https://he.utexas.edu/images/easyblog_articles/243/GettyImages-823767128_high.jpg" style="width:100%">
+  <img class="mySlides" src="https://c.files.bbci.co.uk/D505/production/_115033545_gettyimages-1226314512.jpg" style="width:100%">
+  <img class="mySlides" src="https://www.ofx.com/-/media/images_for_modules/modules/ml018%20-%20generic%20hero/blog/cs-342%20medical-tourisim-header-1600x600.ashx?hash=B1C009ADE22C991B6EB2EE16AA546F67" style="width:100%">
+  <img class="mySlides" src="https://img2.storyblok.com/filters:quality(90)/f/81332/1920x640/a7e35fc94b/hero-1920-640-spotlight-on-vaccines-covid-hub-hero-block.jpg" style="width:100%">  
+  <img class="mySlides" src="https://arrivein.com/wp-content/uploads/2021/02/Blog-Banner-Navigating-the-healthcare-system-in-Canada.jpg" style="width:100%">
+</div>
+
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) 
+  {
+    myIndex = 1
+  }    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+    <style>
+    body {
+        background-color: rgb(255, 255, 255);
+        padding: 0px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+    }   
+
+    .dashboard img{
+        margin: 0px;
+        padding: 0px;
+        display: grid;
+        height: 450px;
+        width: 100%;
+        object-fit: cover;
+        padding-bottom:10px;
+    }
+    </style>
+</body></html>
+

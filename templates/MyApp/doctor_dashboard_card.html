@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  margin-left: 300px;  
+  text-align:center;
+  margin-top: 70px;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px 15px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin-top: 65px;
+  margin-left: 350px;
+  margin-right: 60px;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+  
+}
+</style>
+</head>
+<body>
+<h1 style="margin-top:10%;"> Your Appointment Summary </h1>
+<div class="row">
+  <div class="column">
+    <div class="card" style="border-top: 5px solid rgb(255, 106, 106);">
+      <p>{{appointmentcount}}</p>
+      <h3>Your Appointments</h3>
+      
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card" style="border-top: 5px solid rgb(255, 178, 106);">
+      <p>{{patientcount}}</p>
+      <h3>Confirmed Patients</h3>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card" style="border-top: 5px solid rgb(0, 175, 0); margin-left:250px; width:100%;">
+      <p>{{patientdischarged}}</p>
+      <h3>Patient Discharged</h3>
+    </div>
+  </div>
+  
+</div>
+{% block content %}
+{% endblock content %}
+</body>
+</html>

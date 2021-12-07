@@ -1,0 +1,65 @@
+<html lang="en">
+{%load static%}
+<head>
+  <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+{% include 'MyApp/doctor_base.html' %}
+<div class="container"style="margin-left:25%; margin-right:8%; margin-top:7%;">
+
+    <form  action="/search" method="get" style="margin-top: 30px; margin-left:81%;" class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" name="query" id="query" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+ 
+  {% if patients %}
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Your Total Patient List</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+          <th style="text-align:center;">Name</th>
+          <th style="text-align:center;">Mobile</th>
+          <th style="text-align:center;">Address</th>
+        </tr>
+      </thead>
+      {% for p in patients %}
+      <tr>
+        <td style="text-align:center;"> {{p.Patient_First_Name}} {{p.Patient_Last_Name}}</td>
+        <td style="text-align:center;">{{p.contact}}</td>
+        <td style="text-align:center;">{{p.address}}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+  {%else%}
+  <br><br><br>
+  <h4 style="margin-left: 750px; color: red; font-size:30px;">No Patient Found !!!</h4>
+  {% endif %}
+
+
+</div>
+</body>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+
+</html>

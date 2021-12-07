@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="{%  static 'css/homestyle2.css' %}"/>  
+    </head>
+
+    <body>
+        <div class="container" style="font-family: serif" >
+                {% include 'MyApp/web_head.html' %}
+                {% include 'MyApp/navbar.html' %}
+            </div>
+
+        <div id="outer-container">
+            <div id="home_content">
+                <p style="font-family: sans-serif; font-size:30px; font-weight: normal; text-align:center; padding-bottom:25px;">About Us</p>
+                <ul>
+                            <p><strong>Our Aim</strong></p>
+                            <p>To digitize Hospital Systems in India </p>  
+                        
+                </ul>
+
+                <ul>
+                            <p><strong>Admin Module</strong></p>
+                            <p>Sign Up and Then Login (No approval Required).</p>
+                            <li><p>Can register/view/approve/reject/delete doctors</p></li>
+                            <li><p>Can admit/view/approve/reject/discharge patient </p></li>
+                            <li><p>Can book appointments.(approval required by admin)</p></li>      
+                            <li><p>Can Generate/Download Invoice pdf</p></li>  
+                            <li><p>Can view/book/approve Appointment</p></li>
+                </ul>
+            
+                <ul>
+                            <p><strong>Patient Module</strong></p>
+                            <p>Create accounts for admission in hospital. Then Login (Approval required by hospital admin, Then only patient can login).</p>
+                            <li><p>Can view assigned doctor's details </p></li>
+                            <li><p>Can view their booked appointment status (pending/confirmed by admin).</p></li>
+                            <li><p>Can book appointments.(approval required by admin)</p></li>      
+                            <li><p>Can view/download Invoice pdf (Only when that patient is discharged by admin).</p></li>  
+                            <li><p>Can view/download prescription pdf given by Doctor </p></li>
+                </ul>
+
+                 <ul>
+                            <p><strong>Doctor Module</strong></p>
+                            <p>Apply for a job in a hospital. Then Login (Approval required by hospital admin, Then only doctor can login).</p>
+                            <li><p>Can only view their patient details (symptoms, name, mobile ) assigned to that doctor by admin.</p></li>
+                            <li><p>Can view their discharged(by admin) patient list.</p></li>
+                            <li><p>Can view their Appointments, booked by admin.</p></li>      
+                            <li><p>Can delete their Appointment, when the doctor attended their appointment.</p></li>  
+                </ul>
+
+                 <ul>
+                            <p><strong>Covid-19 Module</strong></p>
+                            <li><p>Allow Patients to Book an Appointment for Testing, Admission, Vaccination</p></li>
+                            <li><p>Display Covid-19 Resources/ Helpline Numbers etc.</p></li>
+                            <li><p>Blog Posts and Guidelines Related to Covid-19</p></li>      
+                            <li><p>Can delete their Appointment, when the doctor attended their appointment.</p></li>  
+                </ul>
+            </div>
+        </div>
+    </body>
+ <style>
+
+        #home_content{
+            
+            padding: 30px 30px;
+            display: table-cell;
+            width: 85%;
+            vertical-align: top;
+            background-color: #f9f9f9;
+        }
+        #home_content p{
+            padding-top:10px;
+            font-size: 18px;
+            font-weight:lighter;
+            margin-left:50px;
+            margin-right:50px;
+        }
+        #home_content ul{
+            padding-top:2px;
+            padding-bottom:2px;
+            margin-left:50px;
+            margin-right:50px;
+            font-size: 18px;
+            font-weight:lighter;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            border-left: 5px solid rgb(0,0,146);
+            border-radius:10px;
+            background-color: #fff;
+        }
+        #outer-container {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</html>

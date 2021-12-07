@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/homestyle.css' %}"/>  
+        <title>Home · Ask A Doctor</title>
+             
+    </head>
+    <body>
+            <div class="container" style="font-family:serif" >
+                {% include 'MyApp/web_head.html' %}
+                {% include 'MyApp/navbar.html' %}
+            <div class="outer-container" style="margin-left:30px;margin-top:30px;">
+                    <img src="https://cdn.apollohospitals.com/dev-apollohospitals/2021/04/COVID-19-Vaccination-696x464-2.jpg" width="450" height="280" id="hp"/>
+                    <h3 style="padding-top:30px;"> Please Register on the Cowin App for Your Vaccination Slot </h3>   
+                    <p>Online Booking for Vaccination is Currently Unavailable!</p>
+                    <p>Call to take an Appointment for Vaccination Prior to Visiting the Hospital.</p>
+                    <p> We Will Be Able to Vaccinate You <u>ONLY</u> as per the Appointment Slots available and as per Applicable Govt’s Regulations.<p><br>
+                    <a href="https://www.cowin.gov.in/">Click Here to Visit Cowin</a>
+                    <p>Contact : 1860 500 1066<p>
+
+            </div><br><br><br>
+            <h1 style="margin-left:30px; text-align:center;">Other Vaccination Centres in Pune</h1><br>
+<table style="margin-left:3%; width:95%;">
+  <tr>
+    <th style="width:50px">Sr.No</th>
+    <th style="width:300px">Hospital</th>
+    <th style="width:400px">Address</th>
+    <th style="width:80px">Vaccine</th>
+  </tr>
+  <tr>
+    <td>1.</td>
+    <td>DISTRICT HOSPITAL AUNDH</td>
+    <td>District Hospital Aundh Sangavi Phata, Pune, Maharashtra, 411027</td>
+    <td>Covaxine</td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>KHANDELWAL CHILD MULTI PMCP</td>
+    <td>KHRADI, Pune, Maharashtra, 411014</td>
+    <td>Covishield</td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>BHARATI AYURVED HOSPITAL</td>
+    <td>"Sr No 27 Unit NO 5 Bharati Vidyapeeth Campus Dhankawadi, Pune"</td>
+    <td>Covaxine</td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>Deenanath Hospital</td>
+    <td>Near Deenanath Mangeshkar Hosp Road,Mhetre Bridge Erandwane</td>
+    <td>Covishield</td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>JAHANGIR HOSPITAL PRIVATE</td>
+    <td>32 SASSON ROAD PUNE</td>
+    <td>Covishield</td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>PCMC NEW BHOSARI HOSPITAL CV2</td>
+    <td>Bhosari, Pune, Maharashtra, 411026</td>
+    <td>Covishield</td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td>PCMC SAVITRIBAI PHULE SCHOOL</td>
+    <td>Bhosari Gaonthan Bhosari Pimpri-Chinchwad Pune-411039</td>
+    <td>Covishield</td>
+  </tr>
+  <tr>
+    <td>8.</td>
+    <td>PMC P SAHYADRI SUPER SP</td>
+    <td>NAGAR ROAD PUNE, Pune, Maharashtra, 411006</td>
+    <td>Covishield</td>
+  </tr>
+  <tr>
+    <td>9.</td>
+    <td>PMC P KASTURBA SPECIALITY HOS</td>
+    <td>99A KASTURBA SOCIETY PUNE, Pune, Maharashtra, 411015</td>
+    <td>Covishield</td>
+  </tr>
+  <tr>
+    <td>10.</td>
+    <td>PCMC RUBY HALL CLINIC SAUDAGAR </td>
+    <td>1st Floor Vision Galleria Shopping Complex Pimple Saudagar Pune Maharashtra 411027</td>
+    <td>Covishield</td>
+  </tr>
+</table><br><br><br><br><br>
+    </div>
+
+    </body>
+    <style>
+    .outer-container{
+        font-family:sans-serif;
+    }
+    #hp  {
+        float: left;    
+        margin: 0 0 0 15px;
+        padding-right:50px;
+        }
+        table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+
+        td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+        
+        }
+
+        tr:nth-child(even) {
+        background-color: #ceebf5;
+        }
+    </style>
+</html>

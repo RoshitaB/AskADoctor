@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/homestyle.css' %}"/>  
+        <title>Home · Ask A Doctor</title>
+             
+    </head>
+    <body>
+            <div class="container" style="font-family: serif" >
+                {% include 'MyApp/web_head.html' %}
+                {% include 'MyApp/navbar.html' %}
+                <div class="outer">
+                    <img src="https://apollohealthlib.blob.core.windows.net/health-library/2021/04/New-symptoms-of-COVID-19-1536x1024.jpg" width="600" height="450" id="hp" >
+                    <p>As we keep on acquiring new information on COVID-19, we can see that the situation which should have been under control by now is nowhere near it. 
+                    Every day, COVID-19 is in the news, showing new symptoms or variants affecting the human race. Thus, we need to reacquaint ourselves with all the 
+                    essential information we can get regarding the spread, the second wave, or new variants. As we know how COVID-19 has impacted people of all ages 
+                    and how drastically it is mutating, we should not forget the importance of social distancing and wearing masks.</p>
+                    <br>
+                    <h2>About coronavirus</h2>  
+                    <p>By now, everyone knows what coronavirus is, and many of us have experienced it ourselves. Coronavirus, also known as SARS-CoV2, is a type of virus that 
+                    causes ailments like a common cold, and severe acute respiratory syndrome (SARS). This virus was discovered in 2019 in China. It has since lashed throughout 
+                    the world, causing several medical and economic changes</p>
+                    <h2>New symptoms of COVID-19</h2> 
+                    <p>The second wave of the Covid-19 pandemic has really hit the nation hard. The steep rise in the number of cases every day has brought with it a sense of panic 
+                    and confusion among the general public. It has also been reported that the new mutant strains of the virus that causes Covid-19 infection exhibits some new symptoms.</p>
+                    <p>This is a compiled list of new symptoms that can indicate Covid-19 in an infected individual. However, please do not be alarmed. Since these symptoms could have 
+                    a number of different causes, we urge you to consult your physician and have yourself tested.</p>
+                    <ul>
+                    <li><p><b>Loss of hearing: </b>Two of the major types of vaccines currently being administered include the 
+                    mRNA vaccines and the viral vector vaccines. These vaccines have been designed to carry 
+                    instructions to the cells to build protection. The vaccine does not enter the cell’s nucleus 
+                    where our DNA resides, thereby preventing lack of interaction between the two. Therefore, 
+                    it can be established that the COVID-19 vaccines are configured to build up the body’s defense 
+                    system and not interefee with our genetic makeup.</p><br>
+                    <li><p><b>Pink eye/Conjunctivitis:</b> The new mutant strain of COVID-19 in India has been observed to affect 
+                    the eyes as well, with sudden bouts of conjunctivitis. Unlike regular conjunctivitis, this disease will only 
+                    affect one eye but it may also cause irritation and sensitivity to light in the other. </p><br>
+                    <li><p><b>Extreme Weakness:</b>Weakness and fatigue continue to be symptoms of COVID-19 in the second wave as well.</p><br>
+                    <li><p><b>Gastrointestinal Tract:</b> It is obvious that any disturbance to our main digestion organs can hamper 
+                    our all over health. Symptoms of GI tract infections may indicate COVID-19 infection, and this includes vomiting, 
+                    abdominal pain, loose stools and hunger as well.  </p><br>
+                    <li><p><b>Bone-dry mouth and reduced secretion of saliva:</b>  Yet again a similar symptom like the older variant of COVID-19, oral 
+                    manifestations of this disease can include dryness, changes in colour and texture of your tongue, 
+                    sore blisters, difficulty in eating and dry tongue.  </p><br>
+                    <li><p><b>Severe and long-lasting headache:</b> A very new symptom observed in the second wave of COVID-19 appears to be headache. 
+                    It can continue for a long period of time and will not sober down with normal painkillers. </p><br>
+                    <li><p><b>Diarrhoea:</b> Another new symptom, Diarrhoea has been reported to be a prominent symptom of COVID-19 
+                    during the second wave. It could last from 1 to 15 days.</p><br>
+                    <li><p><b>Rashes and skin irritation:</b> TStudies have proven that rashes on the skin in different parts of the body, 
+                    such as hands and feet, also called acral rashes, are a result of the immunological response to the virus.</p><br></ul>
+
+                    <h2>When to see a doctor</h2>
+                    <p>The CDC recommends that you seek immediate medical attention if you notice any unusual 
+                    symptoms or changes that make it difficult to determine the cause. If you have come in contact with an 
+                    infected person and are experiencing COVID-19 symptoms, you should go to your nearest COVID-19 center. 
+                    Other emergency signs to look out for are:<p>
+                    <ul><li>Trouble breathing<li> Persistent pain<li>Strange pressure in the chest<li>Chills<li>Persistent hiccups<li>Unusual skin tone</ul>               </div>
+            </div>
+        </body>
+        <style>
+            .outer{
+                margin-left:6%;
+                margin-right:10%;
+                font-size:18px;
+                font-family:sans-serif;
+                text-align: justify;
+                background-color: #f9f9f9;
+                padding:50px;
+            }
+            #hp{
+                float: left;    
+                margin: 0 0 0 15px;
+                padding-right:50px;
+                padding-bottom:30px;
+            }
+        </style>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/homestyle.css' %}"/>  
+        <title>Home · Ask A Doctor</title>
+             
+    </head>
+    <body>
+            <div class="container" style="font-family: serif" >
+                {% include 'MyApp/web_head.html' %}
+                {% include 'MyApp/navbar.html' %}
+                <div class="outer">
+                    <img src="https://apollohealthlib.blob.core.windows.net/health-library/2021/04/Treatments-for-Covid-19.jpg" width="600" height="450" id="hp" >
+                    <p>India is currently reeling under the impact of the second wave of 
+                    COVID-19 pandemic that has led to an alarming surge in daily cases. Amid 
+                    the massive surge in the COVID-19 cases across India, people are looking 
+                    out for tips on self-care and treatment options for people severely affected 
+                    by COVID-19 disease.</p>
+                    <br>
+                    <p>While scientists worldwide are working to find and develop treatments for 
+                    COVID-19, optimal supportive care includes antiviral drugs and other drugs, 
+                    including plasma therapy. Other supportive care for severely ill patients 
+                    includes oxygen for those at risk for severe disease and advanced respiratory 
+                    support like ventilation for critically ill patients.</p>
+                    <br>
+                    <h2>Treatment options for COVID-19</h2>  
+                    <p>Here are some of the medicines doctors use for people hospitalized with COVID-19.</p>
+                    <h3>Remdesivir</h3>
+                    <p>The FDA approved remdesivir, an antiviral drug, in October 2020 to treat coronavirus
+                     infection. The green signal was given based on the data that indicated that a select 
+                     group of hospitalized pateints who were  administered remdesivir showed improvement 
+                     in their symptoms and recovered faster. In India, the DCGI (Drug Controller General 
+                     of India) approved remdesivir lyophilized (in powder form) for emergency treatment 
+                     of hospitalized people.The drug can be given to children above the age of 12,
+                      weighing a minimum of 40 kgs, and adults, provided they have been hospitalized.</p>
+                    <h3>Dexamethasone</h3> 
+                    <p>Since the pandemic started, doctors have been using corticosteroids to treat critically 
+                    ill COVID-19-infected people. This drug is effective for people experiencing a cytokine 
+                    storm (hyper-immune reaction). In such cases, the hyperactive immune system of a person 
+                    damages the lungs and other body parts, often leading to life-threatening complications.
+                    Dexamethasone and similar corticosteroids make potent anti-inflammatory medication choices. 
+                    These are easily available and reasonably priced.</p>
+                    <h3>Baricitinib with Remdesivir</h3> 
+                    <p>According to a clinical trial, baricitinib and remdesivir make a promising combination 
+                    when treating COVID-19. Baricitinib is an anti-inflammatory medicine. When it is combined 
+                    with remdesivir, it helps reduce the recovery time in hospitalized people. While the 
+                    combination shows positive results, more clinical studies are needed.</p>
+                    <h3>Anticoagulation Drugs or Blood Thinners</h3>  
+                    <p>Most people who need hospitalization for COVID-19 treatment get medications to prevent 
+                    blood clots. According to a recent study, preventive blood thinners are likely to reduce 
+                    fatalities in COVID cases.</p>
+                    <h3>Monoclonal Antibody (mAB) Treatments</h3>
+                    <p>Monoclonal antibodies are lab-made variants of the antibodies naturally made by our body 
+                    to fight foreign particles, such as the SARS-CoV-2 virus. The mAB treatment is likely to 
+                    reduce the chances of developing severe COVID-19 symptoms.</p>
+                    
+                    <h3>Convalescent Plasma Therapy</h3>
+                    <p>People who have already recovered from the coronavirus infection develop antibodies in 
+                    their blood that helped them fight the virus and recover. Convalescent plasma therapy 
+                    uses the blood products (plasma) of the recovered patients to treat coronavirus-infected 
+                    people. It is safe and widely used.</p>
+                </div>
+            </div>
+        </body>
+        <style>
+            .outer{
+                margin-left:6%;
+                margin-right:10%;
+                font-size:18px;
+                font-family:sans-serif;
+                text-align: justify;
+                background-color: #f9f9f9;
+                padding:50px;
+            }
+            #hp{
+                float: left;    
+                margin: 0 0 0 15px;
+                padding-right:50px;
+                padding-bottom:30px;
+            }
+        </style>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/homestyle.css' %}"/>  
+        <title>Covid-19 · Ask A Doctor</title>
+             
+    </head>
+    <body>
+            <div class="container" style="font-family:serif" >
+                {% include 'MyApp/web_head.html' %}
+                {% include 'MyApp/navbar.html' %}
+            <div class="outer-container" style="margin-left:30px;margin-top:30px;">
+                    <img src="https://cdn.apollohospitals.com/dev-apollohospitals/2021/04/COVID-19-Vaccination-696x464-2.jpg" width="450" height="280" id="hp"/>
+                    <h3 style="padding-top:30px;">Online Booking for Testing is Currently Unavailable!</h3>   
+                    <p>Call to take an Appointment for Testing Prior to Visiting the Hospital.</p>
+                    <p> We Will Be Able to Test You <u>ONLY</u> as per the Appointment Slots available and as per Applicable Govt’s Regulations.<p><br>
+                    <p>Contact : 1860 500 1066<p>
+
+            </div>
+            </body>
+            <style>
+             #hp  {
+        float: left;    
+        margin: 0 0 0 15px;
+        padding-right:50px;
+        }</style>
+</html>

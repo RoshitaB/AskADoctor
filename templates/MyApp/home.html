@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/homestyle.css' %}"/>  
+        <title>Home · Ask A Doctor</title>
+             
+    </head>
+    <body>
+            <div class="container" style="font-family: serif" >
+                {% include 'MyApp/web_head.html' %}
+                {% include 'MyApp/navbar.html' %}
+                {% include 'MyApp/web_home_cover.html' %}
+
+                <div id="outer-container">
+                         <div class="sidebar">
+                         <strong><p style="color:white; font-family:sans-serif; padding-top:25px; padding-bottom:18px; text-align:center; margin:0px; font-size:20px">QUICK LINKS</p></strong>
+                            <a href="{% url 'MyApp:CentersofExcellence' %}"><img class="icon" src="{% static "images/SpecIcon.png" %}">Specialities</a>
+                            <a href="{% url 'MyApp:adminlogin' %}"><img class="icon" src="{% static "images/AIcon.png" %}">Admin</a>
+                            <a href="{% url 'MyApp:doctorlogin' %}"><img class="icon" src="{% static "images/DocIcon2.png" %}">Doctor</a>
+                            <a href="{% url 'MyApp:patientlogin' %}"><img class="icon" src="{% static "images/PIcon.png" %}">Patient</a>
+                            
+                        </div>
+
+                    <div id="home_content">
+                        Ask A Doctor - The Spirit to Care
+                        <p><strong>Who are we</strong></p>
+                        <p>Ask a Doctor is an initiative that was created with inspiration from various hospital websites with added functionalitites and features. The aim of this website is to make Health Care easily accessible and to digitize hospital management systems especially in the rural parts of India.</p>
+                        
+                        
+                        <ul>
+                            <p><strong>Our Facilities</strong></p>
+                            <li><p>Largest network of the world’s finest and brightest medical experts</p></li>
+                            <li><p>Quaternary healtcare across all specialities</p></li>
+                            <li><p>Round-the-clock multi-disciplinary team</p></li>
+                            <li><p>Experienced teams with advanced technologies</p></li>
+                        
+                        </ul>
+                    </div>
+                </div>
+                
+
+            </div>
+    </body>
+     <style>
+        html {
+	        height: 100%;
+        }
+
+        body {
+            margin: 0;
+            height: 100%;
+        }
+        #home_content{
+            font-family: sans-serif;
+            font-size:30px;
+            font-weight: normal;
+            margin:30px 25px;
+            padding: 30px 30px;
+            display: table-cell;
+            width: 85%;
+            vertical-align: top;
+            background-color: #f9f9f9;
+        }
+        #home_content p{
+            padding-top:10px;
+            font-size: 18px;
+            font-weight:lighter;
+        }
+        #outer-container {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+        .sidebar {
+            margin-top: 0px;
+            padding-top: 0px;
+            width: 100%;
+            text-align: center;
+            height: 100%;
+            background-color: rgb(0, 146, 146);
+            font-family: sans-serif;
+            font-size:17px;
+            font-weight: normal;
+           
+        }
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 25px;
+            text-decoration: none;
+        }
+        .icon{
+            float:left;
+            
+            width:30px;
+            height:30px;
+        }
+ 
+        .sidebar a.active {
+            color: rgb(255, 206, 70);
+        }
+
+        .sidebar a:hover:not(.active) {
+            color: rgb(255, 206, 70);
+        }
+
+        @media screen and (max-width: 700px) {
+        .sidebar {
+            width: 100%;
+            height: auto;
+            position: relative;
+        }
+        .sidebar a {float: left;}
+            div.content {margin-left: 0;}
+        }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                text-align: center;
+                float: none;
+            }
+        }
+            
+    </style>
+</html>

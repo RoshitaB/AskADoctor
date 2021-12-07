@@ -1,0 +1,86 @@
+
+
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor · Home</title>
+</head>
+<body>  
+    {% include 'MyApp/doctor_base.html' %}
+
+    <h1>Appointments </h1>
+    <div class="row">
+    <div class="column">
+        <div class="card" style="border-top: 5px solid rgb(255, 106, 106);">
+        <h2><a href="{% url 'MyApp:doctor_view_appointment' %}" style="color:black">View Appointment</a></h2>
+        </div>
+    </div>
+
+    <div class="column">
+        <div class="card" style="border-top: 5px solid rgb(255, 178, 106);">
+        <h2><a href="{% url 'MyApp:doctor_delete_appointment' %}" style="color:black">Delete Appointment</a></h2>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+  margin-left: 300px;  
+  text-align:center;
+  margin-top: 120px;
+}
+
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px 15px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin-top: 65px;
+  margin-left: 350px;
+  margin-right: 60px;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: white;
+}
+
+.card:hover {
+  background-color:#f9f9f9;
+}
+</style>

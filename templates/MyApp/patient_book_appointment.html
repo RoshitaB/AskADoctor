@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+{% load crispy_forms_tags %}
+
+    <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+      <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body style="background-color: white; "> 
+    {% include 'MyApp/patient_base.html' %}
+
+    {% if message %}
+
+    <script>
+      var a = "{{message}}";
+      alert(a);
+    </script>
+
+    {% endif %}
+
+    <form method="post">
+      {% csrf_token %}
+      
+      <div class="container register-form">
+        <div class="form">
+          <div class="form-content">
+          <p style=" padding-top:10px; border-radius:20px; font-family: serif; font-size: 30px; color:balck; padding-bottom:10px; text-align:center">Book Appointment</p>
+            
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">Doctor: 
+                  {% render_field appointmentForm.doctorId class="form-control" placeholder="doctor" %}
+                </div>
+
+                <div class="form-group">Appointment Date: 
+                  {% render_field appointmentForm.appointmentDate class="form-control" placeholder="Date of Appointment" %}
+                </div>
+
+                <div class="form-group">Appointment Time: 
+                  {% render_field appointmentForm.time class="form-control" placeholder="Date of Appointment" %}
+                </div>
+                
+                <div class="form-group">Description/Extra Notes
+                    {% render_field appointmentForm.description class="form-control" placeholder="Description" %}
+                </div>
+
+                
+                
+              </div>
+            </div>
+            <button type="submit" class="btnSubmit" style="margin-top:7%;margin-left:42%;">Book</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <style media="screen">
+        a:link {
+          text-decoration: none;
+        }
+
+        .form-content {
+          background-color: white;
+          border-radius: 25px;
+          padding-top: 20px;
+          padding: 2.5%;
+          border: 1px solid #ced4da;
+          margin-top: 15%;
+          margin-left:350px;
+          margin-right:50px;
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .form-group {
+          border-radius: 1.5rem;
+          padding: 12px 20px;
+          width:100%;
+          margin: 5px;
+          box-sizing: border-box;
+
+        }
+
+        .btnSubmit {
+          border: none;
+          margin-top: 20%;
+          border-radius: 1.5rem;
+          width: 10%;
+          cursor: pointer;
+          background: rgb(0, 146, 146);
+          color: white;
+        }
+        .btnSubmit:hover {
+          background-color: rgb(0, 154, 154);
+        }
+
+        .menu {
+          top: 50px;
+        }
+      </style>
+    </body>

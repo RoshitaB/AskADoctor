@@ -1,0 +1,63 @@
+<html>
+{% extends 'MyApp/doctor_base.html' %}
+{% block content_dashboard %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    .container{
+        margin-left: 350px;
+        margin-right: 50px;
+    }
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Delete Your Appointments</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+          <th>Patient Name</th>
+          <th>Description</th>
+          <th>Mobile</th>
+          <th>Address</th>
+          <th>Appointment Time</th>
+          <th>Appointment Date</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      {% for a,p in appointments %}
+      <tr>
+        <td>{{a.patientName}}</td>
+        <td>{{a.description}}</td>
+        <td>{{p.contact}}</td>
+        <td>{{p.address}}</td>
+        <td>{{a.time}}</td>
+        <td>{{a.appointmentDate}}</td>
+        <td><a class="btn btn-danger btn-xs" href="{% url 'MyApp:delete_appointment' a.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+{% endblock content_dashboard %}
+</body>
+</html>

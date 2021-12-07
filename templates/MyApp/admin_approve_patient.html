@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>Admin · Approve Patient</title>
+</head>
+<body>
+    {% include 'MyApp/admin_base.html' %}
+    <div class="container" style="margin-left:20%; margin-top:8%">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Patient Wants To Admit</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Mobile</th>
+          <th>Address</th>
+          <th>Approve</th>
+          <th>Reject</th>
+        </tr>
+      </thead>
+      {% for p in patients %}
+      <tr>
+        <td> {{p.Patient_First_Name}}</td>
+        <td>{{p.contact}}</td>
+        <td>{{p.address}}</td>
+        <td><a class="btn btn-primary btn-xs" href="{% url 'MyApp:approve_patient' p.id  %}"><span class="glyphicon glyphicon-ok"></span></a></td>
+        <td><a class="btn btn-danger btn-xs" href="{% url 'MyApp:reject_patient' p.id  %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+
+
+</div>
+</body>
+<style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</html>

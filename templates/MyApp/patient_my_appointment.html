@@ -1,0 +1,61 @@
+{% extends 'MyApp/patient_base.html' %}
+<body>
+    {%  block content_dashboard %}
+
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    .container{
+        margin-left: 20%;
+        width: 80%;
+    }
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">My Appointments</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+          <th>Doctor Name</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Description</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      {% for a in appointments %}
+      <tr>
+        <td> {{a.doctorName}}</td>
+        <td>{{a.appointmentDate}}</td>
+        <td>{{a.time}}</td>
+        <td>{{a.description}}</td>
+        {%if a.status%}
+        <td> <span class="label label-primary">Confirmed</span></td>
+        {% else %}
+        <td> <span class="label label-success">Pending</span></td>
+        {% endif %}
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+    {%  endblock content_dashboard %}
+</body>

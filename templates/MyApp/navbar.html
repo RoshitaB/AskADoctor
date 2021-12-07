@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0">
+        <title>Home · Ask A Doctor</title>
+        
+    </head>
+    <body>
+            <div class="container" style="font-family: serif" >
+            <div class="navbar">
+                <a href="{% url 'MyApp:home' %}">Home</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Patient Care ៴
+                        </button>
+                        <div class="dropdown-content">
+                        <a href="{% url 'MyApp:home_book_appointment' %}">Book an Appointment</a>
+                        <a href="{% url 'MyApp:CentersofExcellence' %}">Our Centres of Excellence</a>
+                        <a href="{% url 'MyApp:patientlogin' %}">Patient Login</a>
+                        </div>
+                    </div> 
+                    <a href="{% url 'MyApp:Covid19' %}">Covid-19</a>
+                    <div class="dropdown">
+                        <button class="dropbtn">Management ៴
+                        </button>
+                        <div class="dropdown-content">
+                        <a href="{% url 'MyApp:adminlogin' %}">Admin Login</a>
+                        <a href="{% url 'MyApp:doctorlogin' %}">Doctor Login</a>
+                        </div>
+                    </div>
+                    <a class="right" href="{% url 'MyApp:about' %}">About</a>
+            </div>
+
+             
+    </body>
+    <style> 
+        body {
+            background-color: rgb(255, 255, 255);
+            padding: 0px;
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+        }
+        .navbar {
+            overflow: hidden;
+            background-color: rgb(255, 206, 70);
+        }
+
+        .navbar a {
+            float: left;
+            display:block;
+            font-size: 18px;
+            color: black;
+            text-align: center;
+            padding: 18px 16px;
+            text-decoration: none;
+        }
+        .navbar a.right{
+            float:right;
+        }
+        .dropdown {
+        float: left;
+        overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            font-size: 18px;  
+            border: none;
+            outline: none;
+            color: black;
+            padding: 16px 16px 12px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn {
+            color: rgb(0, 146, 146);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 20px;
+        text-decoration: none;
+        display: block;
+        text-align:justify;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(240, 240, 240);
+        }
+
+        .dropdown:hover .dropdown-content {
+        display: block;
+        } 
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            }
+
+        .sticky + .content {
+            padding-top: 60px;
+        }
+       
+    </style>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var navbar = getElementsById("navbar");
+        var sticky = navbar.offsetTop:
+
+        function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky");
+        } else {
+            navbar.classList.remove("sticky");
+        }
+        }
+</script>
+           
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/signupform.css' %}"/> 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> 
+        <title>Admin Signup · Ask A Doctor</title>
+             
+    </head>
+    <body >
+        <div class="container">
+            <div class="name">  
+            </div>
+            <div class="content-box">
+                <div class="content-main">
+                    <div class="signup-form">
+                        <h1>Admin Sign-up</h1>
+                        <h4>Already a Admin? <a href="{% url 'MyApp:adminlogin' %}">Login Here!</a></h4><br>
+                         <form method="POST">
+                         {% csrf_token %}
+                            {{ admin_form|crispy }}
+                        <input type="submit" class="btn-primary" value="Sign Up">
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+       </div>
+    </body>   
+    <style> 
+                body  
+                {  
+                    background-image:url("https://styledme.com/wp-content/uploads/2021/03/minimal-zoom-background.jpg"); 
+                    background-repeat: no-repeat; 
+                    max_width=100%;
+                    max_height=100%;
+                    background-size: cover;
+                    position: relative;
+                } 
+            
+    </style>  
+</html>
+            

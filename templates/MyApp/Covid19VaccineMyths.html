@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang= "en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width, initial-scale=1.0"> 
+        <link rel="stylesheet" href="{%  static 'css/homestyle.css' %}"/>  
+        <title>Home · Ask A Doctor</title>
+             
+    </head>
+    <body>
+            <div class="container" style="font-family: serif" >
+                {% include 'MyApp/web_head.html' %}
+                {% include 'MyApp/navbar.html' %}
+                <div class="outer">
+                    <img src="https://apollohealthlib.blob.core.windows.net/health-library/2021/04/Common-COVID-19-Vaccine-Myths-1536x1024.jpg" width="600" height="450" id="hp" >
+                    <p>COVID-19 that started as an epidemic in Wuhan, turned into a pandemic 
+                    within a span of a few months. Eventually, the process of vaccine production 
+                    kicked in, with currently over 10 vaccines being manufactured in bulk across the 
+                    globe. The first batch of approvals vaccinations for emergency use began in the 
+                    latter half of December 2020. In India, Covishield and Covaxin are currently being 
+                    administered in different phases.</p>
+
+                    <p>With the vaccination drive underway, it is important to dispel any myths about 
+                    vaccines circulating in India. Lack of proper understanding and lack of exposure to 
+                    the science behind the functioning of a vaccine can prove harmful to the many individuals 
+                    who are withholding themselves from getting vaccinated. At the same time, it is essential to 
+                    educate oneself about these vaccines from the right sources.</p>
+
+                    <p>You must consult with your nearest doctor about the vaccine and check if you are allergic 
+                    to any ingredients of the vaccine.</p>
+                    <br>
+                    <h2>Common vaccine myths</h2>  
+                    <p>Some of the common COVID-19 vaccine myths include:</p>
+                    <ul>
+                    <li><p><b>Myth: </b>The COVID-19 vaccine will alter my DNA.</p>
+                    <p><b>Truth: </b>Two of the major types of vaccines currently being administered include the 
+                    mRNA vaccines and the viral vector vaccines. These vaccines have been designed to carry 
+                    instructions to the cells to build protection. The vaccine does not enter the cell’s nucleus 
+                    where our DNA resides, thereby preventing lack of interaction between the two. Therefore, 
+                    it can be established that the COVID-19 vaccines are configured to build up the body’s defense 
+                    system and not interefee with our genetic makeup.</p><br>
+                    <li><p><b>Myth: </b>Post-vaccination, I would test positive for a COVID-19 test.</p>
+                    <p><b>Truth: </b>None of the vaccines approved for vaccination would result in testing you positive 
+                    for any of the COVID tests. This also applies to any vaccination undergoing clinical trials. 
+                    Nevertheless, the vaccine, post-administration, would impart an immune response which would cause 
+                    you to test positive for any antibody tests. These tests indicate the presence of an active defense 
+                    system against COVID-19.</p><br>
+                    <li><p><b>Myth: </b>I can develop COVID-19 post-vaccination.</p>
+                    <p><b>Truth: </b>None of the approved vaccines contain the live virus and cannot trigger the disease 
+                    itself. On the contrary, the vaccine is designed to teach the immune system to recognize and defend 
+                    itself in the event of a virus attack in the future. Therefore, you cannot be sick with COVID-19 due 
+                    to the vaccination. Our immune system takes a few weeks to build up immunity against the virus. It is 
+                    quite likely that you can have a viral attack and suffer from COVID-19 due to an unprepared immune 
+                    system. But this is  due to the lack of protection from the vaccine yet , not because of it.</p><br>
+                    <li><p><b>Myth: </b>COVID-19 vaccine is unsafe as it was developed quickly.</p>
+                    <p><b>Truth: </b>With the current advancement in science and technology, the development of COVID-19 
+                    vaccines underwent a faster procedure to approval without missing any safety steps. The vaccine has 
+                    been proved safe and efficacious, and has been recommended for immediate use among adults. Having 
+                    said that, the manufacturing process was thorough, and a lot of manpower and resources were put in 
+                    to get through the confirmation, approval, and production of the vaccines to curtail the damage 
+                    caused by the SARS-CoV2.</p><br>
+                    <li><p><b>Myth: </b>COVID-19 vaccines can cause allergic reactions.</p>
+                    <p><b>Truth: </b>In rare instances globally, certain participants displayed severe allergic reactions 
+                    post-vaccination and had to be admitted and treated immediately. Therefore, you should ask a doctor 
+                    before getting vaccinated if you find yourself allergic to any component of the vaccine and have had 
+                    a severe allergic response such as anaphylaxis in the past.</p><br>
+                    <li><p><b>Myth: </b>There is no need to wear a mask post-vaccination.</p>
+                    <p><b>Truth: </b>Wearing a mask, practicing social distancing, and regular washing of hands must 
+                    continue post-vaccination until the pandemic has been put in check. Practicing these precautionary 
+                    steps not only continues to protect you from the disease but also protects your near and dear ones 
+                    from contracting the virus.</p><br>
+                    <li><p><b>Myth: </b>I have been infected with COVID-19 and therefore do not require vaccination.</p>
+                    <p><b>Truth: </b>Since research continues to determine the duration of the immunity received 
+                    post-infection, it is highly recommended to be vaccinated despite a previous infection. 
+                    Mayo Clinic strongly recommends getting vaccinated 90 days post-infection and not during infection 
+                    or quarantine.</p><br>
+                    <li><p><b>Myth: </b>The COVID-19 vaccine comes with a microchip to control the population.</p>
+                    <p><b>Truth: </b>The COVID-19 vaccines do not have any microchip or nano transducers to track and 
+                    control the general population. The vaccine consists of specific ingredients designed to instruct 
+                    the body to build up immunity against SARS-CoV2 to provide protection, thereby preparing the immune
+                     system in the event of an actual attack from the virus.</p><br></ul>
+                    
+                    <b>Conclusion</b><p>With over a year of the onset of the pandemic, vaccination too now comes under the 
+                    list of practices to prevent contracting and spreading of the infection. Many myths circulate, 
+                    preventing scores of people from getting vaccinated and availing the benefits of the same. It is, 
+                    therefore, necessary to debunk these myths, consult with your doctor, and get vaccinated. The right 
+                    information prevents fear from spreading and helps the people stand united against this infection.</p>
+                    
+
+                    
+                </div>
+            </div>
+        </body>
+        <style>
+            .outer{
+                margin-left:6%;
+                margin-right:10%;
+                font-size:18px;
+                font-family:sans-serif;
+                text-align: justify;
+                background-color: #f9f9f9;
+                padding:50px;
+            }
+            #hp{
+                float: left;    
+                margin: 0 0 0 15px;
+                padding-right:50px;
+                padding-bottom:30px;
+            }
+        </style>
