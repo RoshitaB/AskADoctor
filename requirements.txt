@@ -1,3 +1,4 @@
+argon2-cffi @ file:///opt/concourse/worker/volumes/live/d733ceb5-7f19-407b-7da7-a386540ab855/volume/argon2-cffi_1613037492998/work
 Django==2.2.5
 django-crispy-forms==1.12.0
 django-widget-tweaks==1.4.8
