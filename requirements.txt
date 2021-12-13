@@ -61,6 +61,7 @@ gevent @ file:///opt/concourse/worker/volumes/live/123efac8-0706-463e-4084-07838
 glob2 @ file:///home/linux1/recipes/ci/glob2_1610991677669/work
 gmpy2==2.0.8
 greenlet @ file:///opt/concourse/worker/volumes/live/de3154a2-fbbd-4797-71f5-5fe8ea617adf/volume/greenlet_1611958369459/work
+gunicorn==20.1.0
 h5py==2.10.0
 HeapDict==1.0.1
 html5lib==1.1
