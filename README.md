@@ -2,6 +2,8 @@
 
 A website built using **Django**, **HTML**, **CSS** and **JavaScript** that enables booking an appointment with a doctor easily.
 <br>
+<kbd>![Alt text](/media/home.png "Home Page")</kbd>
+
 It features three modules: Admin Module, Doctor Module, Patient Module
 
 **a. The Admin Module**
@@ -18,11 +20,13 @@ It features three modules: Admin Module, Doctor Module, Patient Module
 
 **c. The Patient Module**
 - Log In/Sign Up
+    <kbd>![Alt text](/media/patientLogin.png)</kbd>
+    <kbd>![Alt text](/media/patientSignUp.png)</kbd>
 - View assigned doctor's details like (specialization, mobile number).
 - View their booked appointment status (pending/confirmed) by admin.
 - Book appointments.
 - View/download Invoice pdf 
 
-#### Home Page:
-<kbd>![Alt text](/media/home.png "Home Page")</kbd>
+
+
 
