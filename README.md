@@ -8,10 +8,10 @@ It features three modules: Admin Module, Doctor Module, Patient Module
 
 **a. The Admin Module**
 - Log In
-- Verify and approve the patient and doctor accounts created
+- Verify and approve the patient and doctor accounts created.
 - View the details of the patient as well as the doctor.
-- Confirm the appointments booked by the patient
-- Generate an Invoice
+- Confirm the appointments booked by the patient.
+- Generate an Invoice.
 
 **b. The Doctor Module**
 - Log In/Sign Up
