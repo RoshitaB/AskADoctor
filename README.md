@@ -25,7 +25,7 @@ It features three modules: Admin Module, Doctor Module, Patient Module
 - Book appointments.
 - View/download Invoice pdf.
 
-    <kbd>![Alt text](/media/patientLogin.png){ width=25% }</kbd>
+    <kbd>![Alt text](/media/patientLogin.png)</kbd>
     <kbd>![Alt text](/media/patientSignUp.png)</kbd>
     <kbd>![Alt text](/media/patientDash.png)</kbd>
     <kbd>![Alt text](/media/appStatus.png)</kbd>
