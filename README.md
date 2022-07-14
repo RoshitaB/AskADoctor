@@ -20,15 +20,16 @@ It features three modules: Admin Module, Doctor Module, Patient Module
 
 **c. The Patient Module**
 - Log In/Sign Up
-    <kbd>![Alt text](/media/patientLogin.png)</kbd>
-    <kbd>![Alt text](/media/patientSignUp.png)</kbd>
 - View assigned doctor's details like (specialization, mobile number).
-    <kbd>![Alt text](/media/patientDash.png)</kbd>
 - View their booked appointment status (pending/confirmed) by admin.
-    <kbd>![Alt text](/media/appStatus.png)</kbd>
 - Book appointments.
+- View/download Invoice pdf.
+
+    <kbd>![Alt text](/media/patientLogin.png){ width=25% }</kbd>
+    <kbd>![Alt text](/media/patientSignUp.png)</kbd>
+    <kbd>![Alt text](/media/patientDash.png)</kbd>
+    <kbd>![Alt text](/media/appStatus.png)</kbd>
     <kbd>![Alt text](/media/bookAppointment.png)</kbd>
-- View/download Invoice pdf 
     <kbd>![Alt text](/media/invoice.png)</kbd>
 
 
