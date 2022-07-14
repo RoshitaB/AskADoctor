@@ -23,5 +23,6 @@ It features three modules: Admin Module, Doctor Module, Patient Module
 - Book appointments.
 - View/download Invoice pdf 
 
-### Results:
-![Alt text](/media/home.png "Home Page")
+#### Home Page:
+<kbd>![Alt text](/media/home.png "Home Page")</kbd>
+
