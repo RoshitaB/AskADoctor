@@ -22,3 +22,6 @@ It features three modules: Admin Module, Doctor Module, Patient Module
 - View their booked appointment status (pending/confirmed) by admin.
 - Book appointments.
 - View/download Invoice pdf 
+
+### Results:
+![Alt text](/media/home.png "Home Page")
